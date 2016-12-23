@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-NewEvent-7d4f64e0-f698-4ff5-b8fa-762de6e1126c",
 
   "dependencies": {
@@ -43,7 +43,8 @@
     "Microsoft.VisualStudio.Web.CodeGenerators.Mvc": {
       "version": "1.0.0-preview2-final",
       "type": "build"
-    }
+    },
+    "MailKit": "1.10.1"
   },
 
   "tools": {

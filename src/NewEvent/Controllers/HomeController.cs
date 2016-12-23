@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using NewEvent.Services;
 
 namespace NewEvent.Controllers
 {
@@ -10,6 +11,11 @@ namespace NewEvent.Controllers
     {
         public IActionResult Index()
         {
+            //Test code
+            //var mail = new MKitTest();
+            //  mail.send();
+            
+
             return View();
         }
 
