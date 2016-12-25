@@ -13,6 +13,7 @@ namespace NewEvent.Services
         public Task SendEmailAsync(string email, string subject, string message)
         {
             // Plug in your email service here to send an email.
+            EmailSender.SendEmail(email, subject, message);
             return Task.FromResult(0);
         }
 

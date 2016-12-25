@@ -7,6 +7,7 @@ using NewEvent.Services;
 
 namespace NewEvent.Controllers
 {
+    [RequireHttps]
     public class HomeController : Controller
     {
         public IActionResult Index()

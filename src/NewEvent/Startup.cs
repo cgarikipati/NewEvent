@@ -12,6 +12,7 @@ using Microsoft.Extensions.Logging;
 using NewEvent.Data;
 using NewEvent.Models;
 using NewEvent.Services;
+using Microsoft.AspNetCore.Mvc;
 
 namespace NewEvent
 {
@@ -43,11 +44,18 @@ namespace NewEvent
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseSqlServer(Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddIdentity<ApplicationUser, IdentityRole>()
+            services.AddIdentity<ApplicationUser, IdentityRole>(config =>
+            {
+                config.SignIn.RequireConfirmedEmail = true;
+            })
                 .AddEntityFrameworkStores<ApplicationDbContext>()
                 .AddDefaultTokenProviders();
 
             services.AddMvc();
+            services.Configure<MvcOptions>(options =>
+            {
+                options.Filters.Add(new RequireHttpsAttribute());
+            });
 
             // Add application services.
             services.AddTransient<IEmailSender, AuthMessageSender>();

@@ -12,6 +12,7 @@ using NewEvent.Services;
 
 namespace NewEvent.Controllers
 {
+    [RequireHttps]
     [Authorize]
     public class ManageController : Controller
     {
