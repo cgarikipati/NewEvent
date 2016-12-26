@@ -8,19 +8,21 @@ namespace DataModel
 {
     public class Event
     {
-        int Id { get; set; }
-       
+       public  int Id { get; set; }
+
         // Name of the event
-        string Name { get; set; }
+        public string Name { get; set; }
 
-        Region Region { get; set; }
+        public Region Region { get; set; }
 
-        EventLevel EventLevl { get; set; }
+        public EventLevel EventLevl { get; set; }
 
-        DateTime StartDateTime { get; set; }
+        public DateTime StartDateTime { get; set; }
 
-        DateTime EndDateTime { get; set; }
+        public DateTime EndDateTime { get; set; }
 
-        List<Challenges> Challenges { get; set; }
+        public List<Challenges> HostedChallenges { get; set; }
+
+        public List <Team> Teams { get; set; }    
     }
 }
